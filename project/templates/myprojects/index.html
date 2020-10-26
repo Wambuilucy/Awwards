@@ -1,0 +1,61 @@
+
+{% extends 'myprojects/base.html'  %}
+{% load static %}
+{% load ratings %}
+{% block content %}
+{{block.super}}
+<link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+<div class="landing-page">
+
+    <div>
+        <p class="text-center" style="color: white; font-size:xx-large" id="welcome"><b>Welcome to
+                project-rating</b></p>
+
+    </div>
+    <div class="row">
+        <div class="col-md-5"></div>
+        <div class="col-md-2"> <a href="{% url 'newproject'%}" class=" justify-content-center btn btn-sm  btn-info "
+                style="color: white; text-decoration: none;">Submit your Site!</a></div>
+        <div class="col-md-5"></div>
+    </div>
+
+
+    <div class="row">
+        <span class="col1 col-md-3"></span>
+        <span class="col2 col-md-3"></span>
+        <span class="col3 col-md-3"></span>
+        <span class="col4 col-md-3"></span>
+    </div>
+</div>
+
+<div class="row mt-1">
+    {% for project in projects %}
+    <!-- <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="card" style="width: 18rem;">
+            <img src="{{project.image.url}}" alt="image">
+            <div class="card-body">
+                <h5 class="card-title">{{project.title}}</h5>
+                <p class="card-text">{{project.description | safe}}.</p>
+                {% ratings project %}
+                <a href="{{project.link}}" class="btn btn-primary">see more</a>
+            </div>
+        </div>
+    </div> -->
+    <div class="container">
+        
+        <div class="col-md-4 col-sm-4 col-lg-4">
+            <div class="card mb-5 mt-5">
+                <img src="{{project.image.url}}" class="img-responsive" alt="image">
+                <div class="card-body">
+                    <h5 class="card-title">{{project.title}}</h5>
+                    <p class="card-text">{{project.description | safe}}.</p>
+
+                    {% ratings project %}
+                    <a href="{{project.link}}" class="btn btn-primary">see more</a>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
+        {% endfor %}
+    </div>
+    {% endblock%}
