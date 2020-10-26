@@ -31,13 +31,13 @@ Install and activate Virtual
 
 Navigate into the folder and install requirements with te command:
 
-pip install -r requirements.txt 
+ pip install -r requirements.txt 
 
 Install Dependencies
 
   pip install -r requirements.txt
 
-Setup Database
+Setup Database:
 
 SetUp your database User,Password, Host then make migrations:
 
