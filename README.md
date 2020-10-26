@@ -12,7 +12,7 @@ This project allows users to post their projects for other users to rate accordi
 ## User Story
 
 1. A user can view posted projects and their details.
-2.  A user can post a project to be rated/reviewed.
+2. A user can post a project to be rated/reviewed.
 3. A user can rate/ review other users' projects.
 4. Search for projects.
 5. View projects overall score.
@@ -21,8 +21,8 @@ This project allows users to post their projects for other users to rate accordi
 ## Setup and Installation
 
 ### To get the project :
-Clone the repository:
 
+Clone the repository:gi
 https://github.com/Wambuilucy/Awwards/project-awwards.git 
 
 Install and activate Virtual
