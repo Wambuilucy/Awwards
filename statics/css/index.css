@@ -1,0 +1,23 @@
+body {
+    font-family: "Crimson Text", serif;
+    background-color:cornsilk;
+  }
+  
+  .text-muted {
+    display: none;
+  }
+  
+  .landing-page {
+    background-image: url('https://bit.ly/37HEjvx');
+    height: 500px;
+    background-size: cover;
+  }
+  
+  #welcome {
+    padding-top: 50px;
+    font-size: 20px;
+  }
+  
+  .user{
+    text-transform: capitalize;
+  }
