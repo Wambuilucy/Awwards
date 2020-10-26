@@ -1,0 +1,15 @@
+{% extends 'myprojects/base.html' %}
+{% load bootstrap3 %}
+{% block content %}
+<div class="container">
+    <div class="card my-4 w-75 mx-auto">
+        <div class="card-body">
+            <form class="my-3" method="post" enctype="multipart/form-data" action = "{% url 'profileupdate' %}">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <input type="submit" value="Submit" class="btn btn-primary">
+            </form> 
+        </div>
+    </div>
+</div>
+{% endblock %}
